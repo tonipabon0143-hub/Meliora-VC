@@ -1,0 +1,44 @@
+name: Meliora VC
+version: 1.0.0
+main: com.example.melioravc.MelioraVCPlugin
+description: Server-side voice chat plugin with character modes and private groups
+api-version: 1.18
+
+commands:
+  vc:
+    description: Main Meliora VC command
+    usage: /vc
+    aliases: [voice, voicechat]
+  vcgroup:
+    description: Open group GUI
+    usage: /vcgroup
+    aliases: [group]
+  vcprox:
+    description: Proximity info
+    usage: /vcprox
+  vcchar:
+    description: Character mode
+    usage: /vcchar [ic|ooc]
+  vchelp:
+    description: Help
+    usage: /vchelp
+  vcmute:
+    description: OP mute
+    usage: /vcmute <player>
+    permission: melioravc.admin.mute
+  vcdeafen:
+    description: OP deafen
+    usage: /vcdeafen <player>
+    permission: melioravc.admin.deafen
+  vcstatus:
+    description: OP status
+    usage: /vcstatus <player>
+    permission: melioravc.admin.status
+
+permissions:
+  melioravc.admin.mute:
+    default: op
+  melioravc.admin.deafen:
+    default: op
+  melioravc.admin.status:
+    default: op
